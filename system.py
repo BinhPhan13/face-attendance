@@ -48,9 +48,9 @@ while cap.isOpened():
         fontFace=cv.FONT_HERSHEY_SIMPLEX,
         fontScale=1.2, color=(0,0,255), thickness=2
     )
-    # if not real: continue
-
     cv.imshow('frame', frame)
+    if not real: continue
+
     if enroll and ord('k') == cv.waitKey(1):
         cv.imwrite('test.jpg', face); break
 
